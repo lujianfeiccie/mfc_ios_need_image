@@ -37,5 +37,5 @@ public:
 	CString ShowDirectoryDlg();
 	CEdit m_edit_directory;
 
-	
+	void OnDestroy();
 };

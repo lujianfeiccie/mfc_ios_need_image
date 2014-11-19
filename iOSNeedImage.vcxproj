@@ -103,6 +103,7 @@
   <ItemGroup>
     <ClInclude Include="BaseDlg.h" />
     <ClInclude Include="CheckResulgDlg.h" />
+    <ClInclude Include="Config.h" />
     <ClInclude Include="iOSNeedImage.h" />
     <ClInclude Include="iOSNeedImageDlg.h" />
     <ClInclude Include="ModelResult.h" />
@@ -114,6 +115,7 @@
   <ItemGroup>
     <ClCompile Include="BaseDlg.cpp" />
     <ClCompile Include="CheckResulgDlg.cpp" />
+    <ClCompile Include="Config.cpp" />
     <ClCompile Include="iOSNeedImage.cpp" />
     <ClCompile Include="iOSNeedImageDlg.cpp" />
     <ClCompile Include="ModelResult.cpp" />

@@ -7,7 +7,7 @@
 #include "iOSNeedImageDlg.h"
 #include "afxdialogex.h"
 #include "CheckResulgDlg.h"
-
+#include "Config.h"
 #ifdef _DEBUG
 #define new DEBUG_NEW
 #endif
@@ -67,6 +67,7 @@ BEGIN_MESSAGE_MAP(CiOSNeedImageDlg, CBaseDlg)
 	ON_WM_QUERYDRAGICON()
 	ON_BN_CLICKED(IDC_BTN_BROWSER, &CiOSNeedImageDlg::OnBnClickedBtnBrowser)
 	ON_BN_CLICKED(IDC_BTN_START_VALIDATE, &CiOSNeedImageDlg::OnBnClickedBtnStartValidate)
+	ON_WM_DESTROY()
 END_MESSAGE_MAP()
 
 
@@ -102,7 +103,10 @@ BOOL CiOSNeedImageDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// 设置小图标
 
 	// TODO: 在此添加额外的初始化代码
-
+	CString cstr_directory;
+	Config::ReadConfig(L"directory",cstr_directory.GetBuffer());
+	m_edit_directory.SetWindowTextW(cstr_directory);
+	cstr_directory.ReleaseBuffer();
 	return TRUE;  // 除非将焦点设置到控件，否则返回 TRUE
 }
 
@@ -212,3 +216,14 @@ CString CiOSNeedImageDlg::ShowDirectoryDlg()
  		 
          return strFolderPath;   
 } 
+
+void CiOSNeedImageDlg::OnDestroy()
+{
+	CString cstr_directory;
+	m_edit_directory.GetWindowTextW(cstr_directory);
+	if(cstr_directory.Trim() != L"")
+	{
+		Config::WriteConfig(L"directory",cstr_directory);
+	}
+	CBaseDlg::OnDestroy();
+}
