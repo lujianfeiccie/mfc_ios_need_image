@@ -1,7 +1,9 @@
 #pragma once
 #include "BaseDlg.h"
 #include "afxcmn.h"
-
+#include "ModelResult.h"
+#include <vector>
+using namespace std;
 // CCheckResulgDlg ¶Ô»°¿ò
 
 class CCheckResulgDlg : public CBaseDlg
@@ -24,4 +26,12 @@ public:
 	CListCtrl m_listctrl_check;
 	void InsertItems();
 	void SetCell(HWND hWnd,CString value, int nRow, int nCol);
+
+	vector<CModelResult*> m_list;
+	void initData();
+	void check();
+	void updateList();
+
+	CString m_directory;
+	CImageList m_imagelist;
 };

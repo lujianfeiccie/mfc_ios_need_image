@@ -36,4 +36,6 @@ public:
 	afx_msg void OnBnClickedBtnStartValidate();
 	CString ShowDirectoryDlg();
 	CEdit m_edit_directory;
+
+	
 };

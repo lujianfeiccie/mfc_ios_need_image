@@ -22,6 +22,12 @@
     <None Include="res\iOSNeedImage.ico">
       <Filter>资源文件</Filter>
     </None>
+    <None Include="res\bitmap1.bmp">
+      <Filter>资源文件</Filter>
+    </None>
+    <None Include="res\bmp00001.bmp">
+      <Filter>资源文件</Filter>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="iOSNeedImage.h">
@@ -45,6 +51,12 @@
     <ClInclude Include="CheckResulgDlg.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="ModelResult.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
+    <ClInclude Include="Util.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="iOSNeedImage.cpp">
@@ -60,6 +72,12 @@
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="CheckResulgDlg.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="ModelResult.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="Util.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>

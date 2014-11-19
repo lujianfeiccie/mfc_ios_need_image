@@ -175,10 +175,11 @@ void CiOSNeedImageDlg::OnBnClickedBtnStartValidate()
 	m_edit_directory.GetWindowTextW(directory_str);
 	if(directory_str.Trim() == L"")
 	{
-		MessageBox(L"提示",L"文件夹不能为空!");
+		MessageBox(L"文件夹不能为空!",L"提示");
 		return;
 	}
 	CCheckResulgDlg dlg;
+	dlg.m_directory = directory_str;
 	dlg.DoModal();
 }
 CString CiOSNeedImageDlg::ShowDirectoryDlg() 
